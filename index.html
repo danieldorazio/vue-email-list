@@ -14,11 +14,11 @@
 
     <div id="app">
         <ul>
-            <li>email</li>
+            <li v-for="(email, index) in email">{{ email }}</li>
         </ul>
     </div>
 
-    
+
     <!-- AXIOS -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- CASTOM JS -->

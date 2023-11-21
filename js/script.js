@@ -3,20 +3,19 @@ const { createApp} = Vue;
 const app = createApp ({
     data () {
         return {
-            email: ["danie@Gamepad.com"]
+            email: []
         }
     },
 
     created () {
-        axios
-        .get("https://flynn.boolean.careers/exercises/api/random/mail")
-        .then((resp) => {
-            console.log(resp.data.response);
-        })
-    },
-
-    methods: {
-
+for (let i = 0; i < 10; i++) {
+            axios
+            .get("https://flynn.boolean.careers/exercises/api/random/mail")
+            .then((resp) => {
+                this.email.push(resp.data.response);
+                console.log(this.email);
+            }) 
+        }
     },
 })
 
